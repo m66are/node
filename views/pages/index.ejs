@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <%- include('../partials/head'); %>
+</head>
+<%- include('../partials/header'); %>
+
+    <body>
+        <p>Hello im the home</p>
+        <p>
+
+            <%= simpleText%>
+        </p>
+        <ul>
+            <% persons.forEach(function(person) { %>
+                <li>
+                    <strong><%= person.name %></strong> from
+                    <%= person.organization %>, born
+                        <%= person.birth_year %>
+                </li>
+                <% }); %>
+        </ul>
+    </body>
+    <%- include('../partials/footer'); %>
+
+</html>
